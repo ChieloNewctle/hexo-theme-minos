@@ -18,6 +18,12 @@
                     .join('<span>></span>') %>
         </span>
         <% } %>
+        <% if (post.portal_link){ %>
+        <span class="column is-narrow article-portal-link">
+            <i class="fas fa-link"></i>
+            <a href="<%- (post.portal_link) %>"><%- __('article.portal_link') %></a>
+        </span>
+        <% } %>
         <% if (!has_config('article.readtime') || get_config('article.readtime') === true) { %>
         <span class="column is-narrow">
             <% let words = word_count(post._content); %>

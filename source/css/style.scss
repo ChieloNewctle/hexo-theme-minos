@@ -2,7 +2,7 @@ $family-serif: "Ovo", "Georgia", "STZhongsong", "Microsoft YaHei", serif;
 $family-mono: "Source Code Pro", monospace, "Microsoft YaHei";
 $border-color: #dbdbdb;
 
-@import "../../../../node_modules/highlight.js/styles/atom-one-light";
+@import "../../../../node_modules/highlight.js/styles/tomorrow";
 
 body, button, input, select, textarea {
     font-family: $family-serif;
@@ -16,8 +16,8 @@ a.tag.article-tag {
 
 @media screen and (min-width: 1024px) {
     .container {
-        max-width: 800px;
-        width: 800px;
+        max-width: 960px;
+        width: 960px;
     }
 
     .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {
