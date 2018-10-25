@@ -41,6 +41,11 @@ a.tag.article-tag {
     a.navbar-item.is-active {
         color: #3273dc;
     }
+
+    .toc .navbar-dropdown {
+        max-height: 500px;
+        overflow-y: auto;
+    }
 }
 
 .article {
@@ -430,26 +435,15 @@ a.tag.article-tag {
     }
 }
 
-$hljs-classes: "comment" "quote" "variable" "template" "attribute" "tag" "name" "regexp" "link" "name" "selector"
-                "selector" "number" "meta" "built_in" "builtin" "literal" "type" "params" "string" "symbol" "bullet"
-                "title" "section" "keyword" "selector" "deletion" "addition" "deletion" "addition" "emphasis" "strong";
-
 code, pre {
     font-size: 0.85rem;
     font-family: $family-mono;
 }
 
 figure.highlight {
-    @extend .hljs;
     padding: 0;
     width: 100%;
     margin: 0 0 1.5rem;
-
-    @each $class in $hljs-classes {
-        .#{$class} {
-            @extend .hljs-#{$class} !optional;
-        }
-    }
 
     pre,
     table tr:hover {
@@ -463,6 +457,7 @@ figure.highlight {
 
     pre {
         padding: 0;
+        overflow: visible;
 
         .line {
             line-height: 1.5rem;
