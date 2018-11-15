@@ -21,8 +21,24 @@
         <% if (post.portal_link){ %>
         <span class="column is-narrow article-portal-link">
             <i class="fas fa-link"></i>
-            <a href="<%- (post.portal_link) %>"><%- __('article.portal_link') %></a>
+            <% if (post.portal_link.indexOf('$') > -1){ %>
+            <a href="<%- post.portal_link.split(/\$(.+)/)[1] %>"><%- post.portal_link.split(/\$(.+)/)[0] %></a>
+            <% } else { %>
+            <a href="<%- post.portal_link %>"><%- __('article.portal_link') %></a>
+            <% } %>
         </span>
+        <% } %>
+        <% if (post.portal_links){ %>
+            <% post.portal_links.forEach(portal_link => { %>
+            <span class="column is-narrow article-portal-link">
+                <i class="fas fa-link"></i>
+                <% if (portal_link.indexOf('$') > -1){ %>
+                <a href="<%- portal_link.split(/\$(.+)/)[1] %>"><%- portal_link.split(/\$(.+)/)[0] %></a>
+                <% } else { %>
+                <a href="<%- portal_link %>"><%- __('article.portal_link') %></a>
+                <% } %>
+            </span>
+            <% }) %>
         <% } %>
         <% if (!has_config('article.readtime') || get_config('article.readtime') === true) { %>
         <span class="column is-narrow">
