@@ -40,7 +40,7 @@ if (languages.length > 1) {
 <link rel="icon" href="<%- get_config('favicon') %>">
 <% } %>
 
-<link rel="stylesheet" href="//fonts.loli.net/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Source+Code+Pro|Noto+Serif+SC|Noto+Sans+SC|Roboto+Condensed">
 <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 
 <% if (!(has_config('plugins.gallery') && get_config('plugins.gallery') === false)) { %>
@@ -54,7 +54,7 @@ if (languages.length > 1) {
 
 <%- css('css/leaves') %>
 
-<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script defer src="//cdn.bootcss.com/font-awesome/5.8.1/js/all.js"></script>
 
 <% if (has_config('plugins')) { %>
     <% for (let plugin in get_config('plugins')) { %>

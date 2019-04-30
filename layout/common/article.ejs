@@ -18,27 +18,19 @@
                     .join('<span>></span>') %>
         </span>
         <% } %>
-        <% if (post.portal_link){ %>
+        <% if (post.portal_link) { %>
         <span class="column is-narrow article-portal-link">
             <i class="fas fa-link"></i>
-            <% if (post.portal_link.indexOf('$') > -1){ %>
-            <a href="<%- post.portal_link.split(/\$(.+)/)[1] %>"><%- post.portal_link.split(/\$(.+)/)[0] %></a>
-            <% } else { %>
             <a href="<%- post.portal_link %>"><%- __('article.portal_link') %></a>
-            <% } %>
         </span>
         <% } %>
-        <% if (post.portal_links){ %>
-            <% post.portal_links.forEach(portal_link => { %>
+        <% if (post.portal_links) { %>
+            <% for(key in post.portal_links) { %>
             <span class="column is-narrow article-portal-link">
                 <i class="fas fa-link"></i>
-                <% if (portal_link.indexOf('$') > -1){ %>
-                <a href="<%- portal_link.split(/\$(.+)/)[1] %>"><%- portal_link.split(/\$(.+)/)[0] %></a>
-                <% } else { %>
-                <a href="<%- portal_link %>"><%- __('article.portal_link') %></a>
-                <% } %>
+                <a href="<%- post.portal_links[key] %>"><%- key %></a>
             </span>
-            <% }) %>
+            <% } %>
         <% } %>
         <% if (!has_config('article.readtime') || get_config('article.readtime') === true) { %>
         <span class="column is-narrow">
