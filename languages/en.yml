@@ -17,6 +17,7 @@ article:
   words: 'words'
   comments: 'Comments'
   contents: 'Contents'
+  portal_link: 'Portal Link'
 search:
   hint: 'Type something...'
 insight:

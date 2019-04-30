@@ -1,11 +1,29 @@
-$family-serif: "Ovo", "Georgia", "STZhongsong", "Microsoft YaHei", serif;
-$family-mono: "Source Code Pro", monospace, "Microsoft YaHei";
+// $family-serif: "Ovo", "Georgia", "STZhongsong", "Microsoft YaHei", serif;
+$family-serif: "Noto Serif SC", serif;
+// $family-mono: "Source Code Pro", monospace, "Microsoft YaHei";
+$family-mono: "Source Code Pro", monospace;
+$family-sans: "Roboto Condensed", "Noto Sans SC", sans-serif;
+
 $border-color: #dbdbdb;
+
+@import "../../../../node_modules/highlight.js/styles/tomorrow";
 
 body, button, input, select, textarea {
     font-family: $family-serif;
 }
 
+p {
+    text-indent: 2em;
+    text-align: justify;
+}
+
+p.article-more-link {
+    text-indent: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $family-sans;
+}
 
 a.tag.article-tag {
     font-size: 0.9rem;
@@ -14,8 +32,8 @@ a.tag.article-tag {
 
 @media screen and (min-width: 1024px) {
     .container {
-        max-width: 800px;
-        width: 800px;
+        max-width: 820px;
+        width: 820px;
     }
 
     .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {

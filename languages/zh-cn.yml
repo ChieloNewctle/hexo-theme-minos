@@ -17,6 +17,7 @@ article:
   words: '字'
   comments: '评论'
   contents: '目录'
+  portal_link: '传送门'
 search:
   hint: '站内搜索'
 insight:
