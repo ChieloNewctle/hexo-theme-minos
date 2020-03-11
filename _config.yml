@@ -26,7 +26,7 @@ menu:
   分类: /categories
   标签: /tags
   技巧: /cheat-sheet
-  当前赛季比赛列表: /regional-contests
+  # 当前赛季比赛列表: /regional-contests
 
 # Search plugin settings.
 search:
@@ -42,7 +42,7 @@ toc: true
 
 # Comment plugin settings.
 comment:
-  type: gittalk
+  type: gitalk
   owner: ChieloNewctle
   repo: chielonewctle.github.io
   admin:
